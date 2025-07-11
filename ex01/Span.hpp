@@ -1,6 +1,6 @@
 #pragma once
 
-#include <array>
+#include <sstream>
 #include <iostream>
 #include <vector>
 
@@ -10,8 +10,8 @@ class Span
 		Span();
 		Span( unsigned int );
 		~Span();
-		Span &operator=( Span & );
-		Span( Span & );
+		Span &operator=( const Span & );
+		Span( const Span & );
 
 		class ExceptionNotEnoughSpace : std::exception
 		{
@@ -25,12 +25,18 @@ class Span
 				virtual const char *what() const throw(); 
 		};
 
-		unsigned int getMax();
+		unsigned int getMax() const;
+		unsigned int getCurrent() const;
 		unsigned int shortestSpan();
 		unsigned int longestSpan();
-		std::vector<unsigned int> getSpan();
+		void addNumber( unsigned int );
+		std::vector<unsigned int> getSpan() const;
 
 	private :
 		std::vector<unsigned int> _span;
 		unsigned int _max;
+		unsigned int _current;
 };
+
+
+std::ostream &operator<<( std::ostream &, const Span & );
