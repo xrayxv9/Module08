@@ -101,6 +101,14 @@ void Span::addNumber( unsigned int number )
 	_current++;
 }
 
+void Span::improvedAddNumber( unsigned int range, int seed )
+{
+	if (range + _current >= _max)
+		throw ExceptionNotEnoughSpace();
+	for (int i = 0; i <= 9; i++)
+		this->addNumber(rand() % seed);
+}
+
 std::ostream &operator<<( std::ostream &o, const Span &sp)
 {
 	std::vector<unsigned int> vect = sp.getSpan();

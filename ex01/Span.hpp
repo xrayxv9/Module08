@@ -3,6 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 class Span
 {
@@ -13,13 +14,13 @@ class Span
 		Span &operator=( const Span & );
 		Span( const Span & );
 
-		class ExceptionNotEnoughSpace : std::exception
+		class ExceptionNotEnoughSpace : public std::exception
 		{
 			public:
 				virtual const char *what() const throw(); 
 		};
 
-		class NotEnoughNumber : std::exception
+		class NotEnoughNumber : public std::exception
 		{
 			public:
 				virtual const char *what() const throw(); 
@@ -30,6 +31,7 @@ class Span
 		unsigned int shortestSpan();
 		unsigned int longestSpan();
 		void addNumber( unsigned int );
+		void improvedAddNumber( unsigned int, int );
 		std::vector<unsigned int> getSpan() const;
 
 	private :
