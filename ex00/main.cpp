@@ -19,12 +19,12 @@ int main()
 	arr2.push_back(3);
 	arr2.push_back(2);
 
-	std::cout << "list : " << std::endl << std::endl;
+	std::cout << "TEST LIST : " << std::endl << std::endl;
 	::easyfind(arr, 92);
 	::easyfind(arr, 1);
 	::easyfind(arr, 2);
 
-	std::cout << "vector : " << std::endl << std::endl;
+	std::cout << "TEST VECTOR : " << std::endl << std::endl;
 	::easyfind(arr2, 92);
 	::easyfind(arr2, 1);
 	::easyfind(arr2, 2);
