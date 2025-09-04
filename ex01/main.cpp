@@ -56,4 +56,16 @@ int main()
 	{
 		std::cerr << e.what() << std::endl;
 	}
+
+	std::cout << std::endl << std::endl << "NOT ENOUGH SPACE EXCEPTION IMPROVEDADDNUMBER" << std::endl;
+	try 
+	{
+		customSpanHuge.improvedAddNumber(10000, 10000);
+		std::cout << "the longestSpan is : " << customSpanHuge.longestSpan() << std::endl;
+		std::cout << "the shortestSpan is : " << customSpanHuge.shortestSpan() << std::endl;
+	} 
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }
