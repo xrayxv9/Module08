@@ -35,7 +35,7 @@ int main()
 	std::cout << std::endl << std::endl << "10 VALUES TEST" << std::endl;
 	try 
 	{
-		customSpan.improvedAddNumber(10, 100);
+		customSpan.improvedAddNumber(10, 10000);
 		std::cout << customSpan << std::endl;
 		std::cout << "the longestSpan is : " << customSpan.longestSpan() << std::endl;
 		std::cout << "the shortestSpan is : " << customSpan.shortestSpan() << std::endl;

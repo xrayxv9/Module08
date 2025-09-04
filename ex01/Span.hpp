@@ -1,9 +1,9 @@
 #pragma once
 
-#include <sstream>
 #include <iostream>
 #include <vector>
 #include <cstdlib>
+#include <algorithm>
 
 class Span
 {
@@ -32,10 +32,10 @@ class Span
 		unsigned int longestSpan();
 		void addNumber( unsigned int );
 		void improvedAddNumber( unsigned int, int );
-		std::vector<unsigned int> getSpan() const;
+		std::vector<int> getSpan() const;
 
 	private :
-		std::vector<unsigned int> _span;
+		std::vector<int> _span;
 		unsigned int _max;
 		unsigned int _current;
 };
